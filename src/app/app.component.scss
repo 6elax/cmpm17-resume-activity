@@ -4,8 +4,36 @@
     margin-top: 15px;
     padding: 1rem 1.4rem;
     border-radius: 14px;
-    color: #1d2d2c;
+    color: #543535;
     font-size: 25px;
-    background-color: rgb(223, 255, 196);
+    background-color: #fdcaca;// rgb(223, 255, 196);
   }
+  .container {
+    background-color: #543535;;
+    color: whitesmoke;
+
+    img{
+      padding: 1rem;
+      width: 350px;
+      height: 200px;
+    }
+
+    h2 {
+      padding: 1px;
+      font-size: 20px;
+      color: rgba(247, 219, 202, 0.5);
+    }
+    .list {
+      padding: 1rem;
+
+      &:hover {
+        color: rgb(178, 178, 252);
+      }
+      
+    }
+    p {
+      padding: 1px;
+    }
+  }
+
 }
