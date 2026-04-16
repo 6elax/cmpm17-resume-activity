@@ -23,7 +23,7 @@
       font-size: 20px;
       color: rgba(247, 219, 202, 0.5);
     }
-    .list {
+    .skills {
       padding: 1rem;
 
       &:hover {
@@ -33,6 +33,13 @@
     }
     p {
       padding: 1px;
+    }
+    .courses {
+      padding: 1rem;
+      color:#543535
+    }
+    .expansion-header{
+      font-weight: 400;
     }
   }
 

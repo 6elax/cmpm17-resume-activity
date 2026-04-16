@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 @Component({
   selector: 'app-component',
-  imports: [],
+  imports: [MatExpansionModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -48,10 +49,13 @@ export class AppComponent {
   major: string = 'Computer Science';
 
 
-skills: string[] = [
-    'asdf',
-    'paragraph'
-]
+  skills: string[] = [
+      'asdf',
+      'paragraph'
+  ]
+
+
+
   
   
 }
