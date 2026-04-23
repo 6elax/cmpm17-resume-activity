@@ -54,8 +54,22 @@
       </mat-expansion-panel>
   </mat-accordion>
 
-  <p> 
 
-  </p>
+  <div class="working-experience">
+      <h3>Working Experience</h3>
+      <!-- The beginning the user working experience -->
+      @for (experience of experiences; track experience.__id){
+         <ul>
+            <li> {{ experience.name }} </li>
+         </ul>
+      }
+      <!-- Current user name -->
+      <h3> {{ currentName() }}</h3>
+      @for (experience of cmpm17student()?.descriptions; track experience){
+      <ul>
+         <li> {{ experience }} </li>
+      </ul>
+      }
+  </div>
          
 </div>
