@@ -3,10 +3,13 @@ import { RouterOutlet } from '@angular/router';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { Experience } from './experience/experience.model';
 import { EXPERIENCES } from './experience/experience.mock';
+import { TestComponentComponent } from './test-component/test-component.component';
+import { inject } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-component',
-  imports: [ MatExpansionModule ],
+  imports: [ MatExpansionModule, TestComponentComponent, RouterOutlet ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -43,6 +46,9 @@ import { EXPERIENCES } from './experience/experience.mock';
 // ]
 
 export class AppComponent {
+
+  //------------- UI COMPONENT NAME
+
   title = 'cmpm17-resume-activity';
 
   name: string = "Alexis";
@@ -63,6 +69,12 @@ export class AppComponent {
   /** Current user name. */
   currentName: WritableSignal<string> = signal('Jialai');
 
+  /** declare router object: */
+  private router = inject(Router);
+
+
+
+
   // --------- COMPUTED DATA
 
   /** Select cmpm17 student info */
@@ -74,6 +86,18 @@ export class AppComponent {
     )
   } )
 
+  // ----------- EVENT HANDLING
+
+  isPage1() {
+    this.router.navigate(['/page1']);
+  }
+
+  isPage2() {
+    this.router.navigate(['/page2']);
+  }
   
+  isPage3() {
+    this.router.navigate(['/page3']);
+  }
   
 }
