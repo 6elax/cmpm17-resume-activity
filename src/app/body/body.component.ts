@@ -3,10 +3,11 @@ import { Experience } from '../experience/experience.model';
 import { Router } from '@angular/router';
 import { EXPERIENCES } from '../experience/experience.mock';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { BodyItemComponent } from './body-item/body-item.component';
 
 @Component({
   selector: 'app-body',
-  imports: [MatExpansionModule],
+  imports: [MatExpansionModule, BodyItemComponent],
   templateUrl: './body.component.html',
   styleUrl: './body.component.scss'
 })

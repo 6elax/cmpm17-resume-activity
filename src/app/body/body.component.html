@@ -1,6 +1,5 @@
 <p>body works!</p>
 
-
 <div class="container">
    <h2>{{name}}</h2>
    <p>year: {{year}} </p>
@@ -55,6 +54,18 @@
       </mat-expansion-panel>
   </mat-accordion>
 
+  <div class="working-component">
+   <h3>working component . . . !</h3>
+   @for (experience of experiences; track experience.__id){
+      <ul>
+         <li>
+            <app-body-item
+            [user]="experience">
+            </app-body-item>
+         </li>
+      </ul>
+   }
+  </div>
 
   <div class="working-experience">
       <h3>Working Experience</h3>
@@ -71,9 +82,5 @@
          <li> {{ experience }} </li>
       </ul>
       }
-  </div>
-         
+  </div>  
 </div>
-
-
-

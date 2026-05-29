@@ -6,10 +6,11 @@ import { EXPERIENCES } from './experience/experience.mock';
 import { TestComponentComponent } from './test-component/test-component.component';
 import { inject } from '@angular/core';
 import { Router } from '@angular/router';
+import { BodyComponent } from './body/body.component';
 
 @Component({
   selector: 'app-component',
-  imports: [ MatExpansionModule, TestComponentComponent, RouterOutlet ],
+  imports: [ MatExpansionModule, TestComponentComponent, RouterOutlet, BodyComponent ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -53,23 +54,23 @@ export class AppComponent {
 
   name: string = "Alexis";
   
-  year: number = 1;
-  major: string = 'Computer Science';
+  // year: number = 1;
+  // major: string = 'Computer Science';
 
 
-  skills: string[] = [
-      'asdf',
-      'paragraph'
-  ]
+  // skills: string[] = [
+  //     'asdf',
+  //     'paragraph'
+  // ]
 
 
-  /** Working experiences. */
-  experiences: Experience[] = EXPERIENCES;
+  // /** Working experiences. */
+  // // experiences: Experience[] = EXPERIENCES;
 
-  /** Current user name. */
-  currentName: WritableSignal<string> = signal('Jialai');
+  // /** Current user name. */
+  // currentName: WritableSignal<string> = signal('Jialai');
 
-  /** declare router object: */
+  // /** declare router object: */
   private router = inject(Router);
 
 
@@ -77,14 +78,14 @@ export class AppComponent {
 
   // --------- COMPUTED DATA
 
-  /** Select cmpm17 student info */
-  cmpm17student: Signal<Experience|undefined> = computed( () => { 
-    //need |undefined in case "cmpm17student" doesn't exist
-    return this.experiences.find(
-      //exp => exp.name == 'cmpm17-student'
-      exp => exp.name == this.currentName()
-    )
-  } )
+  // /** Select cmpm17 student info */
+  // cmpm17student: Signal<Experience|undefined> = computed( () => { 
+  //   //need |undefined in case "cmpm17student" doesn't exist
+  //   return this.experiences.find(
+  //     //exp => exp.name == 'cmpm17-student'
+  //     exp => exp.name == this.currentName()
+  //   )
+  // } )
 
   // ----------- EVENT HANDLING
 
