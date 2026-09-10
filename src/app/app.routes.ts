@@ -1,14 +1,14 @@
 import { Routes } from '@angular/router';
-import { HeaderComponent } from './header/header.component';
+import { CoursesComponent } from './courses/courses.component';
 import { TestComponentComponent } from './test-component/test-component.component';
 import { BodyComponent } from './body/body.component';
 
 export const routes: Routes = [
-    {path: 'page1', loadComponent:() => import('./body/body.component')
+    { path: 'home', loadComponent:() => import('./body/body.component')
         .then((mod) => mod.BodyComponent) },
-    {path: 'page2', loadComponent:() => import('./header/header.component')
-        .then((mod) => mod.HeaderComponent) },
-    {path: 'page3', loadComponent:() => import('./test-component/test-component.component')
+    { path: 'page2', loadComponent:() => import('./courses/courses.component')
+        .then((mod) => mod.CoursesComponent) },
+    { path: 'page3', loadComponent:() => import('./test-component/test-component.component')
         .then((mod) => mod.TestComponentComponent) },
-        
+    { path: '**', redirectTo: 'home', pathMatch: 'full' },
 ];

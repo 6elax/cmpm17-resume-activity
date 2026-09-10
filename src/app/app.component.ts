@@ -7,10 +7,11 @@ import { TestComponentComponent } from './test-component/test-component.componen
 import { inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { BodyComponent } from './body/body.component';
+import { HeaderComponent } from './header/header.component';
 
 @Component({
   selector: 'app-component',
-  imports: [ MatExpansionModule, TestComponentComponent, RouterOutlet, BodyComponent ],
+  imports: [ MatExpansionModule, RouterOutlet, HeaderComponent, ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -73,9 +74,6 @@ export class AppComponent {
   // /** declare router object: */
   private router = inject(Router);
 
-
-
-
   // --------- COMPUTED DATA
 
   // /** Select cmpm17 student info */
@@ -89,8 +87,8 @@ export class AppComponent {
 
   // ----------- EVENT HANDLING
 
-  isPage1() {
-    this.router.navigate(['/page1']);
+  isHome() {
+    this.router.navigate(['home']);
   }
 
   isPage2() {

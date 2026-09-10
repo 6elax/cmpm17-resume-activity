@@ -32,7 +32,7 @@ export class BodyComponent {
   /** Working experiences. */
   experiences: Experience[] = EXPERIENCES;
 
-  /** Current user name. */
+  /** Current user name. writable signal! */
   currentName: WritableSignal<string> = signal('Jialai');
 
   /** declare router object: */
@@ -43,7 +43,7 @@ export class BodyComponent {
 
   // --------- COMPUTED DATA
 
-  /** Select cmpm17 student info */
+  /** Select cmpm17 student info, computed signal!!! */
   cmpm17student: Signal<Experience|undefined> = computed( () => { 
     //need |undefined in case "cmpm17student" doesn't exist
     return this.experiences.find(
